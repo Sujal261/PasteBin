@@ -133,4 +133,4 @@ def get_paste_info(url_id: str):
         'is_expired': expires_at and datetime.strptime(expires_at, '%Y-%m-%d %H:%M:%S') < datetime.now() or False
     }
     
-    #random comment
+#main
