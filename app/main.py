@@ -10,6 +10,7 @@ def startup_event():
     initialize_db()
     """Initialize the database when server starts"""
     print("Database initialized")
+    """add"""
 
 @app.post("/create/")
 def create(request: Request, content: str, user_id: str, password: str = None, expires_after: int = None):
