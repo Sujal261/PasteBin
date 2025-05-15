@@ -3,9 +3,19 @@ import shortuuid
 from datetime import datetime, timedelta
 from passlib.context import CryptContext
 from pathlib import Path
+from dotenv import load_dotenv
+import os
+
+# Load environment variables
+load_dotenv()
 
 # Password hashing setup
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+# Resolve DB path from environment (absolute from root)
+ROOT_DIR = Path(__file__).resolve().parent.parent  # Go 1 level up from this file
+DB_NAME = os.getenv("DB_NAME")
+DB_PATH = ROOT_DIR / DB_NAME  # This is now absolute
 
 def get_db_connection():
     """Get a new database connection"""
@@ -120,5 +130,5 @@ def get_paste_info(url_id: str):
         'user_id': user_id,
         'created_at': created_at,
         'expires_at': expires_at,
-        'is_expired': expires_at and datetime.strptime(expires_at, '%Y-%m-%d %H:%M:%S') < datetime.now()
+        'is_expired': expires_at and datetime.strptime(expires_at, '%Y-%m-%d %H:%M:%S') < datetime.now() or False
     }
