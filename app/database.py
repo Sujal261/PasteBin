@@ -19,7 +19,7 @@ DB_PATH = ROOT_DIR / DB_NAME  # This is now absolute
 
 def get_db_connection():
     """Get a new database connection"""
-    return sqlite3.connect('../database/content.db')
+    return sqlite3.connect(DB_PATH)
 
 def initialize_db():
     """Initialize the database and create tables if they don't exist"""
