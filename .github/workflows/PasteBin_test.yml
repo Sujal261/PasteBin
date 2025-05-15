@@ -7,9 +7,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    defaults:
-     run:
-      working-directory: ./app/
+    
     
     strategy:
       matrix:
@@ -35,4 +33,4 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest
+        pytest tests/test_main.py
