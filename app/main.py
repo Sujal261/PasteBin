@@ -6,10 +6,10 @@ app = FastAPI()
 
 @app.on_event("startup")
 def startup_event():
-    """Initialize the database when server starts"""
+    
     initialize_db()
     print("Database initialized")
-
+"""Initialize the database when server starts"""
 @app.post("/create/")
 def create(request: Request, content: str, user_id: str, password: str = None, expires_after: int = None):
     """
