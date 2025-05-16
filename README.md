@@ -57,18 +57,6 @@ docker build -t pastebin-clone .
 docker run -p 8000:8000 pastebin-clone
 ```
 
-## Docker Compose (Example)
-
-```bash
-version: '3.8'
-services:
-  pastebin:
-    image: pastebin-clone
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./database:/app/database
-```
 
 ## 📖 API Documentation
 
@@ -145,8 +133,7 @@ pastebin-clone/
 ├── database/              # SQLite database
 │   └── content.db
 ├── tests/                 # Unit tests
-├── requirements.txt       # Production dependencies
-├── dev-requirements.txt   # Development dependencies
+├── requirements.txt       
 └── README.md
 ```
 
