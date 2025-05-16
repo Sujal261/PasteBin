@@ -146,7 +146,7 @@ pytest tests/test_main.py
 
 For a quick walkthrough of the project, check out the demo video on YouTube:
 
-👉 [Watch Demo on YouTube](https://www.youtube.com/watch?v=your-demo-video-link)
+👉 [Watch Demo on YouTube](https://youtu.be/1mRU4fftgbg)
 
 
 
