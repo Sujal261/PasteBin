@@ -88,7 +88,6 @@ curl -X POST "http://localhost:8000/create" \
      -d "content=Secret&user_id=user123&password=mypass&expires_after=60"
 ```
 
-```bash
 
 #### View a Paste
 
@@ -142,6 +141,13 @@ pastebin-clone/
 ```bash 
 pytest tests/test_main.py
 ```
+
+## 🎥 Demo Video
+
+For a quick walkthrough of the project, check out the demo video on YouTube:
+
+👉 [Watch Demo on YouTube](https://www.youtube.com/watch?v=your-demo-video-link)
+
 
 
 
